@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "NqCeMtyu7TgsHboimJ/s1rVmF0sgNnYX2Vm6E2Ym96Im23DlPMgBBKjBj2DNeqS3G3RwfbszVv7AMGKqKyd7XQ==",
+  "success": true,
+  "projectFilePath": "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstration/TechnicalDemonstration.csproj",
+  "expectedPackageFiles": [
+    "/Users/jallport/.nuget/packages/csvhelper/31.0.2/csvhelper.31.0.2.nupkg.sha512",
+    "/Users/jallport/.nuget/packages/filehelpers/3.5.2/filehelpers.3.5.2.nupkg.sha512",
+    "/Users/jallport/.nuget/packages/newtonsoft.json/13.0.3/newtonsoft.json.13.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

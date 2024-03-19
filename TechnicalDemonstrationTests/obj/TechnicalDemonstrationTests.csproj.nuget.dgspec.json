@@ -1,0 +1,156 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstrationTests/TechnicalDemonstrationTests.csproj": {}
+  },
+  "projects": {
+    "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstration/TechnicalDemonstration.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstration/TechnicalDemonstration.csproj",
+        "projectName": "Medica.Uk.TechnicalDemonstration",
+        "projectPath": "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstration/TechnicalDemonstration.csproj",
+        "packagesPath": "/Users/jallport/.nuget/packages/",
+        "outputPath": "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstration/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jallport/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[31.0.2, )"
+            },
+            "FileHelpers": {
+              "target": "Package",
+              "version": "[3.5.2, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstrationTests/TechnicalDemonstrationTests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstrationTests/TechnicalDemonstrationTests.csproj",
+        "projectName": "Medica.Uk.TechnicalDemonstrationTests",
+        "projectPath": "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstrationTests/TechnicalDemonstrationTests.csproj",
+        "packagesPath": "/Users/jallport/.nuget/packages/",
+        "outputPath": "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstrationTests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/jallport/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstration/TechnicalDemonstration.csproj": {
+                "projectPath": "/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstration/TechnicalDemonstration.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.13.3, )"
+            },
+            "NUnit.Analyzers": {
+              "target": "Package",
+              "version": "[3.6.1, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[4.4.2, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.403/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
