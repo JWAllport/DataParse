@@ -7,10 +7,10 @@ namespace Medica.Uk.TechnicalDemonstration
 	{
 		static void Main(string[] args)
 		{
-			// String fileContentJSON = File.ReadAllText("users_1k.json");
-			// ReadJson readJson = new ReadJson(fileContentJSON);
+			String fileContentJSON = File.ReadAllText("users_1k.json");
+			ReadJson readJson = new ReadJson(fileContentJSON);
 
-			// ReadCSV readCSV = new ReadCSV("customers.csv");
+			ReadCSV readCSV = new ReadCSV("customers.csv");
 		}
 	}
 }

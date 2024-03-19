@@ -1,6 +1,6 @@
 namespace TechnicalDemonstrationTests
 {
-	public class TestPlaceholder1
+	public class TestJSON
 	{
 		[Test]
 		public void DefaultFailingPlaceholderTest1()

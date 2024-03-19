@@ -10,7 +10,7 @@ public class ReadJson {
     
     public ReadJson(string json) {
         
-        var friends = JsonConvert.DeserializeObject<List<Root>>(json);
+        var results = JsonConvert.DeserializeObject<List<dynamic>>(json);
         
         
     }

@@ -8,7 +8,6 @@ public class Customer {
     // Index,Customer Id,First Name,Last Name,Company,City,Country,
     // Phone 1,Phone 2,Email,Subscription Date,Website
 
-
     [Name("Index")]
     public string index {get; set;}
     

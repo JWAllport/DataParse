@@ -1,6 +1,6 @@
 namespace TechnicalDemonstrationTests
 {
-	public class TestPlaceholder2
+	public class TestPlaceholderCSV
 	{
 		[Test]
 		public void DefaultFailingPlaceholderTest1()
