@@ -1,5 +1,7 @@
+using System;
 using System.Collections.Generic;
 
+[Obsolete] // using dynamic type in reading of data file
 public class Root
     {
         public int id { get; set; }
