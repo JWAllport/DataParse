@@ -11,15 +11,23 @@ public class ReadCSV {
     private List<dynamic>? records;
 
     public ReadCSV(string readFile) {
+        if (!readFile.ToLower().EndsWith("csv"))
+            throw new InvalidDataException("File is not a CSV");
+        
         this.readFile = readFile;
         setRecords();
     }
 
     public void setRecords() {
         StreamReader sr = new StreamReader(readFile);
-		var csv = new CsvReader(sr, CultureInfo.InvariantCulture);
+		try {
+        var csv = new CsvReader(sr, CultureInfo.InvariantCulture);
 
-        records = csv.GetRecords<dynamic>().ToList();
+        this.records = csv.GetRecords<dynamic>().ToList();
+        } catch(Exception e) {
+             Console.WriteLine(e.Message);
+        }
+       
 
     }
 

@@ -103,3 +103,4 @@
 /Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstrationTests/obj/Debug/net6.0-windows/Medica.Uk.TechnicalDemonstrationTests.pdb
 /Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstrationTests/obj/Debug/net6.0-windows/TechnicalDemonstrationTests.genruntimeconfig.cache
 /Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstrationTests/obj/Debug/net6.0-windows/ref/Medica.Uk.TechnicalDemonstrationTests.dll
+/Users/jallport/Downloads/TechnicalDemonstration/TechnicalDemonstrationTests/bin/Debug/net6.0-windows/CsvHelper.dll

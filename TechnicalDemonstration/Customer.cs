@@ -2,7 +2,7 @@ using System;
 using CsvHelper.Configuration.Attributes;
 
 
-
+[Obsolete] // transitioned to using dynamic type when reading data from file. 
 public class Customer {
 
     // Index,Customer Id,First Name,Last Name,Company,City,Country,

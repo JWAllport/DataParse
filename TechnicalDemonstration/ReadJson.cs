@@ -8,11 +8,26 @@ using Newtonsoft.Json.Linq;
 
 public class ReadJson {
     
-    public ReadJson(string json) {
+    private int recordCount = 0;
+    public ReadJson(string readFile) {
         
-        var results = JsonConvert.DeserializeObject<List<dynamic>>(json);
+         if (!readFile.ToLower().EndsWith("json"))
+            throw new InvalidDataException("File is not a JSON");
         
+
+        string text = File.ReadAllText(readFile);
+        var results = JsonConvert.DeserializeObject<List<dynamic>>(text);
+        if (results != null)
+            recordCount = results.Count;
         
+        results.ForEach(foo => {
+            Console.WriteLine(foo);
+        });
+
+    }
+
+    public int getRecordCount() {
+        return recordCount;
     }
 
 

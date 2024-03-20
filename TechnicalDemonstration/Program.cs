@@ -7,8 +7,7 @@ namespace Medica.Uk.TechnicalDemonstration
 	{
 		static void Main(string[] args)
 		{
-			String fileContentJSON = File.ReadAllText("users_1k.json");
-			ReadJson readJson = new ReadJson(fileContentJSON);
+			ReadJson readJson = new ReadJson("users_1k.json");
 
 			ReadCSV readCSV = new ReadCSV("customers.csv");
 		}
