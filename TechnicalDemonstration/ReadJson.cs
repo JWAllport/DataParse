@@ -17,13 +17,24 @@ public class ReadJson {
 
         string text = File.ReadAllText(readFile);
         var results = JsonConvert.DeserializeObject<List<dynamic>>(text);
-        if (results != null)
-            recordCount = results.Count;
         
-        results.ForEach(foo => {
-            Console.WriteLine(foo);
-        });
+        setRecordCount(results);
+        
+        if (results != null) {
+            results.ForEach(foo => {
+                Console.WriteLine(foo);
+            });
+        }
+        
 
+    }
+
+    private void setRecordCount(List<dynamic>? results)
+    {
+        if (results != null)
+            this.recordCount = results.Count;
+        else 
+            this.recordCount = 0;
     }
 
     public int getRecordCount() {

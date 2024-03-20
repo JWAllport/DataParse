@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
@@ -7,40 +8,41 @@ using CsvHelper;
 
 public class ReadCSV {
 
-    private string readFile;
-    private List<dynamic>? records;
+    private int recordCount;
 
     public ReadCSV(string readFile) {
         if (!readFile.ToLower().EndsWith("csv"))
             throw new InvalidDataException("File is not a CSV");
         
-        this.readFile = readFile;
-        setRecords();
+        var records = SetRecords(readFile);
+
+        records.ForEach(foo =>{
+
+            IDictionary<string, object?> dict = foo;
+            foreach (var key in dict.Keys) {
+                Console.WriteLine(key + ": " + dict[key]);
+            }
+          
+            Console.WriteLine("\n");
+        });
     }
 
-    public void setRecords() {
+    public List<dynamic> SetRecords(string readFile) {
         StreamReader sr = new StreamReader(readFile);
-		try {
+	
         var csv = new CsvReader(sr, CultureInfo.InvariantCulture);
 
-        this.records = csv.GetRecords<dynamic>().ToList();
-        } catch(Exception e) {
-             Console.WriteLine(e.Message);
-        }
-       
+        var records = csv.GetRecords<dynamic>().ToList();
+        setRecordSize(records);
+        return records;
+    }
 
+    private void setRecordSize(List<dynamic> records)
+    {
+        this.recordCount = records.Count;
     }
 
     public int getRecordCount() {
-        if (records == null)
-            return 0;
-        return records.Count;
+        return recordCount;
     } 
-
-    public void setReadFile(string readFile) {
-        this.readFile = readFile;
-    }
-    private string getReadFile() {
-        return this.readFile;
-    }
 }
