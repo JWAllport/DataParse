@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Text;
 using CsvHelper;
 
 public class ReadCSV {
@@ -15,16 +16,25 @@ public class ReadCSV {
             throw new InvalidDataException("File is not a CSV");
         
         var records = SetRecords(readFile);
+        string log = parseFile(records);
+       
+        File.WriteAllText("csv_"+"log.txt", log);
+    }
 
+    private string parseFile(List<dynamic> records)
+    {
+        StringBuilder sb = new StringBuilder();
         records.ForEach(foo =>{
-
             IDictionary<string, object?> dict = foo;
             foreach (var key in dict.Keys) {
-                Console.WriteLine(key + ": " + dict[key]);
+                sb.Append(key + ": " + dict[key] + " ");
             }
           
-            Console.WriteLine("\n");
+            sb.Append('\n');
         });
+        string log = sb.ToString();
+        sb.Clear();
+        return log;
     }
 
     public List<dynamic> SetRecords(string readFile) {

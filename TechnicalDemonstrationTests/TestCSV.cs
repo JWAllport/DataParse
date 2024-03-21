@@ -29,10 +29,23 @@ namespace TechnicalDemonstrationTests
 
 		// Single Row CSV w/OUT Heading
 		[Test]
-		public void DefaultFailingPlaceholderTest2()
+		public void NullValueTest()
 		{
 			
+			FileStream var = File.Create("test.csv");
+			byte[] headings = new UTF8Encoding(true).GetBytes("Name, Age, Marital Status, Housing, Employment Status");
+			byte[] newLine = new UTF8Encoding(true).GetBytes("\n");
+        	byte[] generalInfo = new UTF8Encoding(true).GetBytes("Null, Null, Null, Null, Null");
+
+			var.Write(headings);
+			var.Write(newLine);
+			var.Write(generalInfo);
+			var.Close();
 			
+			ReadCSV rCSV = new ReadCSV(var.Name);
+           	Assert.That(rCSV.getRecordCount, Is.EqualTo(1));
+
+			File.Delete("test.csv");
 		}
 
 		[Test]
@@ -66,6 +79,26 @@ namespace TechnicalDemonstrationTests
 
 
 			File.Delete("test.xml");
+		}
+	
+		[Test]
+		public void MalFormedFileTest()
+		{
+			
+			FileStream var = File.Create("test.csv");
+			byte[] headings = new UTF8Encoding(true).GetBytes("Name, Age, Marital Status, Housing, Employment Status");
+			byte[] newLine = new UTF8Encoding(true).GetBytes("\n");
+        	byte[] generalInfo = new UTF8Encoding(true).GetBytes("Jake, 29, Single, Rent, Employed, Extra, Extra, Extra");
+
+			var.Write(headings);
+			var.Write(newLine);
+			var.Write(generalInfo);
+			var.Close();
+			
+			ReadCSV rCSV = new ReadCSV(var.Name);
+           	Assert.That(rCSV.getRecordCount, Is.EqualTo(1));
+
+			File.Delete("test.csv");
 		}
 	}
 }

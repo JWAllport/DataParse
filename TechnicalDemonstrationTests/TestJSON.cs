@@ -54,9 +54,18 @@ namespace TechnicalDemonstrationTests
 			File.Delete("test.xml");		}
 
 		[Test]
-		public void DefaultFailingPlaceholderTest4()
+		public void DataWithNullValuesTest()
 		{
-			//ssert.Fail("Please add real tests");
+
+			FileStream var = File.Create("test.json");
+			
+			byte[] data = new System.Text.UTF8Encoding(true).GetBytes(
+				"[{\"id\":null,\"name\":null,\"city\":null,\"age\":null}]");
+
+			var.Write(data);
+			var.Close();
+			new ReadJson(var.Name);
+			File.Delete("test.xml");
 		}
 	}
 }

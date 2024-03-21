@@ -43,9 +43,4 @@ public class Customer {
     [Name("Website")]
     public string website  {get; set;}
 
-
-
-
-
-
 }
