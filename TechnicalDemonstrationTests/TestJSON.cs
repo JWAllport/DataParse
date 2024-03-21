@@ -64,8 +64,11 @@ namespace TechnicalDemonstrationTests
 
 			var.Write(data);
 			var.Close();
-			new ReadJson(var.Name);
+			ReadJson rJSON = new ReadJson(var.Name);
+			Assert.That(rJSON.getRecordCount(), Is.EqualTo(1));
+
 			File.Delete("test.xml");
+		
 		}
 	}
 }
